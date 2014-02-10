@@ -1,0 +1,31 @@
+body {
+	padding-top: 20px;
+}
+.container {
+	/* 612px for image, and 30px of side padding for bootstrap */
+	max-width: 642px;
+}
+ol {
+	counter-reset: item;
+	padding-left: 0px;
+}
+#album li {
+	float: left;
+	margin-bottom: 40px;
+	font-family: helvetica, sans-serif;
+	color: #777;
+	display: block;
+}
+#album li:before {
+	content: "#" counter(item);
+	counter-increment: item; 
+}
+#album span.date { 
+	float: right; 
+}
+#album div.insta { 
+	margin-top: 2px; 
+}
+#album img.lazy { 
+	width: 612px; height: 612px; 
+}

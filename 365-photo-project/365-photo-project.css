@@ -1,0 +1,29 @@
+body {
+	padding-top: 20px;
+}
+p.tall {
+	padding-top: 30px;
+}
+.owl-carousel .item img {
+	max-width: 500px;
+	max-height: 500px;
+}
+.owl-carousel .item {
+	text-align: center;
+	vertical-align: middle;
+}
+.owl-theme .owl-controls .owl-buttons div {
+	position: absolute;
+}	
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+	left: -60px;
+ 	top: 240px; 
+}
+.owl-theme .owl-controls .owl-buttons .owl-next{
+	right: -60px;
+	top: 240px;
+}
+.container {
+	max-width: 850px;
+}
+
