@@ -420,27 +420,41 @@ $(function() {
 	}); 
 	
 	$("li").first().addClass("selected");
-	
+
 	$(window).bind("scroll", function() {
+		$("li.selected").removeClass("selected");
         $("li").each(function() {
 			var item = $(this);
-            var position = item.position().top - $(window).scrollTop();
+			var bottom = item.position().top + item.outerHeight(true);
+			var position = bottom - $(window).scrollTop();
 
-            if (position <= 2) {
-                item.addClass('selected');
-            } else {
-                item.removeClass('selected');
+            if (position > 1) {
+                item.addClass("selected");
+				return false;
             }
         });        
-		$("li").first().addClass("selected");
     });
 	$("a.next").bind("click", function() {
-		$.scrollTo($("li.selected").last().next(), 1000, {easing:"swing"});
+		scrollNoQueue($("li.selected").next());
 	});
 	$("a.prev").bind("click", function() {
-		$.scrollTo($("li.selected").last().prev(), 1000, {easing:"swing"});
+		var position = $("li.selected").position().top - $(window).scrollTop();
+		var item;
+		if (position >= 0) {
+			item = $("li.selected").prev();
+		} else {
+			item = $("li.selected");
+		}
+		scrollNoQueue(item);
 	});
 });
+function scrollNoQueue(pos)
+{
+		if ($("html, body").is(":animated")) {
+			return;
+		}
+		$.scrollTo(pos, 1000, {easing:"swing", queue:false});
+}
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
