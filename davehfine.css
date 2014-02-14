@@ -21,3 +21,9 @@ li.media {
 li.media h3 small {
 	font-style: italic;
 }
+p.prj-link {
+	font-style: italic;
+}
+img.media-object {
+	width: 200px;
+}
