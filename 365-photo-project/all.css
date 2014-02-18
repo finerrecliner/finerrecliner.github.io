@@ -36,4 +36,10 @@ ol {
 }
 #next-prev a {
 	margin: 0px 20px 20px 20px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+}
+#next-prev a:hover {
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
 }
