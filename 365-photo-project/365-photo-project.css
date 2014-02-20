@@ -26,4 +26,6 @@ p.tall {
 .container {
 	max-width: 850px;
 }
-
+#final-line {
+	padding-top: 25px;
+}

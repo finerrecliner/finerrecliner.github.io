@@ -43,3 +43,6 @@ ol {
 	filter: Alpha(Opacity=100);/*IE7 fix*/
 	opacity: 1;
 }
+#final-line {
+	padding-top: 25px;
+}
