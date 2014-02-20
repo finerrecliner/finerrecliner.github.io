@@ -3,11 +3,11 @@
 <head>
 <title>Dave H. Fine</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/bootstrap.lumen.min.css">
 <link rel="stylesheet" type="text/css" href="font-awesome-4.0.3/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="davehfine.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar">
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -21,10 +21,11 @@
 			<a class="navbar-brand" href="#welcome">davehfine.com</a>
 		</div>
 		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#about">About</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#contact">Contact</a></li>
+				<li><a href="http://lessonslearnedfordevs.tumblr.com">Blog</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
@@ -38,8 +39,8 @@
 	<a class="anchor" id="about"></a>
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<h1>Dave H. Fine</h1>
-				<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar, est eu vulputate accumsan, quam eros suscipit risus, nec suscipit justo est vulputate ligula. Aenean a dui a est congue euismod quis vel nisl. Sed luctus justo vitae diam mattis, nec aliquet erat sagittis. Vestibulum sit amet urna aliquet dolor fringilla sagittis. Pellentesque malesuada egestas est vel malesuada. Pellentesque et congue est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris fermentum sit amet diam id tempor. Nam at dolor nec nulla posuere convallis. Suspendisse ac lorem bibendum, semper quam id, hendrerit mi. </p>
+			<h1>About</h1>
+				<p class="text-justify">My name is <strong>Dave Fine</strong> and I am a software engineer from Baltimore, MD. I pride myself on writing reliable and beautiful code. I love to create, build and learn. My other passion is photography. I use my camera to capture the world around me as I explore it in detail. Photography allows me to combine my technical mind with my love for art.</p>
 		</div><!--/panel-body-->
 	</div><!--/panel-->
 
@@ -98,8 +99,15 @@
 		<div class="panel-body">
 			<h1>Contact <small>and follow</small></h1>
 			<br>
-			<div class="row text-center">
-				<div class="col-md-2 col-xs-4"><a class="btn btn-link btn-lg" href="http://lessonslearnedfordevs.tumblr.com"><i class="fa fa-bookmark"></i> Blog</a></div>
+			<div class="row text-center" id="contact-row">
+				<script type="text/javascript">
+				x = 'mai' + 'lto:' + 'da' + 'vehfi' + 'ne@g';
+				x = x + 'ma' + 'il.c' + 'om';
+				document.write('<div class="col-md-2 col-xs-4"><a class="btn btn-link btn-lg" href="' + x + '"><i class="fa fa-envelope"></i> Email</a></div>');
+				</script>
+				<noscript>
+					<p><em>Please enable javascript to see my email address.</em></p>
+				</noscript>
 				<div class="col-md-2 col-xs-4"><a class="btn btn-link btn-lg" href="http://www.facebook.com/davehfine"><i class="fa fa-facebook-square"></i> Facebook</a></div>
 				<div class="col-md-2 col-xs-4"><a class="btn btn-link btn-lg" href="http://plus.google.com/110980999525978241169/"><i class="fa fa-google-plus-square"></i> Google+</a></div>
 				<div class="col-md-2 col-xs-4"><a class="btn btn-link btn-lg" href="http://www.linkedin.com/in/davehfine"><i class="fa fa-linkedin-square"></i> LinkedIn</a></div>
@@ -112,8 +120,22 @@
 
 	<div class="footer">
 		<hr>
-		<p class="text-center">&copy; 2014 David Fine. All rights reserved.</p>
-		<p class="text-center"><a class="text-muted" href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
+		<div class="row">
+			<div class="col-xs-6">
+				<ul class="list-inline">
+					<li><a href="http://davehfine.com">Home</a></li>
+					<li><a href="http://davehfine.com#about">About</a></li>
+					<li><a href="http://davehfine.com#projects">Projects</a></li>
+					<li><a href="http://davehfine.com#contact">Contact</a></li>
+					<li><a href="http://lessonslearnedfordevs.tumblr.com">Blog</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6">
+			<p class="text-right"><a href="#"><i class="fa fa-caret-up"></i> back to top</a></p>
+			</div>
+		</div><!--/row-->
+		<p class="text-left text-muted" id="copyright"><em>&copy; 2014 David Fine. All rights reserved.</em></p>
+		<p class="text-center" id="final-line"><a class="text-muted" href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
 	</div><!--/footer-->
 
 </div><!--/container-->

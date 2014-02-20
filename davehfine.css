@@ -28,3 +28,9 @@ img.media-object {
 	width: 200px;
 	margin: 20px 10px;
 }
+#contact-row {
+	padding-bottom: 15px;
+}
+#final-line {
+	padding-top: 25px;
+}
