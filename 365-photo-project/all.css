@@ -4,6 +4,7 @@ body {
 .container {
 	/* 612px for image, and 30px of side padding for bootstrap */
 	max-width: 642px;
+	min-width: 642px;
 }
 ol {
 	counter-reset: item;
