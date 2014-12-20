@@ -4577,7 +4577,7 @@ a.thumbnail.active {
 }
 .media,
 .media .media {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .media:first-child {
   margin-top: 0;
@@ -5703,10 +5703,6 @@ button.close {
 }
 .navbar-fixed-top {
   border-width: 0 1px 4px 1px;
-}
-.btn {
-  border-width: 0 1px 4px 1px;
-  font-size: 14px;
 }
 .btn:hover {
 }
