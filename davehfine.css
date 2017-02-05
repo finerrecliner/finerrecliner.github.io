@@ -27,6 +27,9 @@ p.prj-link {
 img.media-object {
 	width: 200px;
 }
+img.profile-object {
+	width: 150px;
+}
 #contact-row {
 	padding-bottom: 15px;
 }
