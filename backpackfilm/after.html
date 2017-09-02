@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: "FreeMono", monospace;
+            font-weight: bold;
+            color: white;
+        }
+        .jumbotron {
+            background-color: #438000;
+        }
+		.big {
+			font-size: 80px;
+		}
+        .hdr {
+            font-size: 18px;
+        }
+		form {
+			color: black;
+		}
+        input[type="text"] {
+            width: 50px;
+        }
+        input[type="text"].mapinput {
+            width: 100px;
+        }
+		label {
+			padding-left: 10px;
+			padding-bottom: 10px;
+		}
+		button {
+			padding: 8px;
+		}
+        .map {
+            width: 400px;
+            height: auto;
+            margin: 10px;
+        }
+    </style>
+	<script>
+        var countdown = 9;
+
+        $(function() {
+			$(document).keypress(function(event) {
+				if (event.which == 13) {
+					event.preventDefault();
+					$("form :input").prop("disabled", true);
+					$("input[type='text']").css("color", "grey");
+					$("label").css("color", "grey");
+					$("button").css("color", "grey");
+					$("#main").slideUp( function() {
+						$(this).html("TEST WILL BEGIN IN:<br><div class=\"big\">10</div>");
+						$(this).slideDown();
+					});
+					setInterval(updateCountdown, 1000);
+				}
+			});
+        });
+		
+        function updateCountdown() {
+			if (countdown >= 0) {
+				$("#main").html("TEST WILL BEGIN IN:<br><div class=\"big\">" + countdown + "</div>");
+				countdown = countdown - 1;
+			}
+		}
+	</script>
+  </head>
+  <body style="background-color: black">
+    <div class="container">
+    <br>
+      <div class="jumbotron">
+        <h1 class="text-center" id="main">SYSTEM READY</h1>
+		<br><br>
+        <form>
+        <label class="hdr">Settings:</label>
+        <br>
+        <label>A(g)</label>
+        <input type="text" value="3800">
+        <label>A(c)</label>
+        <input type="text" value="NaN">
+        <label>V(n)</label>
+        <input type="text" value="-612">
+        <label>V(r)</label>
+        <input type="text" value="51.1">
+        <label>T(n)</label>
+        <input type="text" value="-85">
+        <label>T(r)</label>
+        <input type="text" value="0.11">
+        <br>
+        <br>
+        <label class="hdr">Destination:</label>
+        <br>
+        <label>Latitude&nbsp;</label>
+        <input class="mapinput" type="text" value="32.789353">
+        <label>Longitude</label>
+        <input class="mapinput" type="text" value="-96.806478">
+        <br>
+        <img class="map" src="dallas.jpg">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
